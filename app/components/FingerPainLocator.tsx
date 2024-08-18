@@ -3,7 +3,11 @@ import Image from "next/image";
 import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
 
-export default function FingerPainLocator() {
+export default function FingerPainLocator({
+  onAreaSelected,
+}: {
+  onAreaSelected: () => void;
+}) {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [activeAreas, setActiveAreas] = useState<string[]>([]);
 
@@ -125,13 +129,14 @@ export default function FingerPainLocator() {
                 return newActiveAreas;
               });
             }
+            onAreaSelected();
           });
       });
     });
   }, [areas, activeAreas]);
 
   return (
-    <div className="flex justify-center items-center  w-full bg-gray-100 overflow-hidden">
+    <div className="flex justify-center items-center  w-full bg-white overflow-hidden">
       <div className="relative max-w-[500px] w-full">
         <Image
           src="/assets/finger/default-finger.png"

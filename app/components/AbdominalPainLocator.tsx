@@ -3,7 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import Image from "next/image";
 
-export default function AbdominalPainLocator() {
+export default function AbdominalPainLocator({
+  onAreaSelected,
+}: {
+  onAreaSelected: () => void;
+}) {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [allOverSelected, setAllOverSelected] = useState<boolean>(false);
@@ -108,11 +112,12 @@ export default function AbdominalPainLocator() {
               : [...prev.filter((id) => id !== "all-over"), d.id]
           );
         }
+        onAreaSelected();
       });
   }, []);
 
   return (
-    <div className="flex justify-center items-center  w-full bg-gray-100 overflow-hidden p-4">
+    <div className="flex justify-center items-center  w-full bg-white overflow-hidden p-4">
       <div className="relative w-full max-w-[500px] md:max-w-[600px]">
         <Image
           src="/assets/abdominal/default-abs.png"
