@@ -133,6 +133,7 @@ export default function AbdominalPainLocator() {
                   width={500}
                   height={700}
                   className="absolute top-0 left-0 object-contain"
+                  unoptimized
                 />
                 {!allAreasSelectedExceptAllOver &&
                   !allOverSelected &&
@@ -144,6 +145,7 @@ export default function AbdominalPainLocator() {
                       width={500}
                       height={700}
                       className="absolute top-0 left-0 object-contain"
+                      unoptimized
                     />
                   )}
               </div>

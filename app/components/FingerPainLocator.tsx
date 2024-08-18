@@ -139,6 +139,7 @@ export default function FingerPainLocator() {
           width={500}
           height={700}
           className="object-contain relative"
+          unoptimized
         />
 
         {activeAreas.includes("dip") && (
@@ -149,6 +150,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
             <Image
               src="/assets/finger/dip-active.png"
@@ -156,6 +158,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
           </>
         )}
@@ -168,6 +171,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
             <Image
               src="/assets/finger/pip-active.png"
@@ -175,6 +179,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
           </>
         )}
@@ -187,6 +192,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
             <Image
               src="/assets/finger/mcp-active.png"
@@ -194,6 +200,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
           </>
         )}
@@ -206,6 +213,7 @@ export default function FingerPainLocator() {
               width={500}
               height={700}
               className="absolute top-0 left-0 object-contain"
+              unoptimized
             />
           </>
         )}
