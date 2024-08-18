@@ -107,7 +107,7 @@ export default function FingerPainLocator() {
           .append("path")
           .attr("d", path.toString())
           .attr("fill", "transparent")
-          .attr("stroke", "red")
+          .attr("stroke", "none")
           .attr("stroke-width", 2)
           .attr("transform", `rotate(${coord.angle}, ${coord.x}, ${coord.y})`)
           .on("click", () => {

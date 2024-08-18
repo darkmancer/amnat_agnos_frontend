@@ -88,7 +88,7 @@ export default function AbdominalPainLocator() {
       .append("path")
       .attr("d", (d) => d.d)
       .attr("fill", "none")
-      .attr("stroke", "red")
+      .attr("stroke", "none")
       .attr("pointer-events", "all")
       .on("click", (event: any, d: any) => {
         if (d.id === "all-over") {
